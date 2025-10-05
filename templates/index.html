@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Weather Picker</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/static/css/style.css" />
+		<!-- Import map for three.js modules (uses CDN examples) -->
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.170/build/three.module.js",
+					"jsm/": "https://cdn.jsdelivr.net/npm/three@0.170/examples/jsm/"
+				}
+			}
+		</script>
+		<!-- Starry background rules moved to /static/css/style.css -->
+	</head>
+	<body>
+			<header class="retro-header">
+				<div class="retro-header-inner">
+					<h1 class="retro-title">WILL IT RAIN ON MY PARADE ?</h1>
+				</div>
+			</header>
+
+			<main class="container retro-layout">
+				<section class="panel panel-map retro-left" aria-label="Map">
+					<h2 class="section-title">SELECT LOCATION :</h2>
+						<div id="map" class="map"></div>
+						<div style="margin-top:8px; text-align:right;">
+							<button id="toggleMapGlobeBtn" class="muted">Use Map</button>
+						</div>
+				</section>
+
+						<aside class="panel panel-info retro-right" id="info" aria-label="Information">
+							<div class="form-block">
+								<label>Enter location manually :</label>
+								<div style="display:flex;gap:8px">
+									<input type="text" id="manualLocation" placeholder="City or place" />
+									<button id="searchBtn" class="muted">Search</button>
+								</div>
+							</div>
+
+					<div class="coords retro-coords">
+						<div>
+							<label>Latitude :</label>
+							<input id="lat" readonly value="—" />
+						</div>
+						<div>
+							<label>Longitude :</label>
+							<input id="lon" readonly value="—" />
+						</div>
+					</div>
+
+					<div class="form-block">
+						<label>Date :</label>
+						<input type="date" id="dateInput" />
+					</div>
+
+							<div class="coord-actions retro-actions">
+						<button id="copyBtn" class="muted" title="Copy coordinates">Copy</button>
+						<button id="predictBtn" disabled>CHECK WEATHER</button>
+					</div>
+
+							<h3 class="side-title">EXPECTED WEATHER CONDITIONS :</h3>
+									<div class="result retro-result">
+										<div class="result-header">
+											<h3>Prediction</h3>
+											<div id="spinner" class="spinner hidden" aria-hidden="true"></div>
+										</div>
+										<div id="prediction-fields" class="prediction-fields">
+												<!-- <div class="pred-row"><div class="pred-label">Rain :</div><div id="pred-prcp" class="pred-value">N/A</div></div> -->
+												<div class="pred-row"><div class="pred-label">Rain Prob :</div><div id="pred-prcp-prob" class="pred-value">N/A</div></div>
+												<div class="pred-row"><div class="pred-label">Temp :</div><div id="pred-temp" class="pred-value">N/A</div></div>
+												<div class="pred-row"><div class="pred-label">Radiation :</div><div id="pred-radiation" class="pred-value">N/A</div></div>
+												<div class="pred-row"><div class="pred-label">Cloud :</div><div id="pred-cloud" class="pred-value">N/A</div></div>
+											</div>
+									</div>
+
+					<footer class="panel-footer retro-footer">
+						<small>App by HighGround</small>
+					</footer>
+				</aside>
+			</main>
+
+		<!-- Three.js globe application (replaces Leaflet) -->
+		<script type="module" src="/static/js/index.js"></script>
+	</body>
+</html>

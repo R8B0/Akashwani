@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Maharashtra" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [ [
+          [72.5, 15.5], [72.5, 22.0], [80.0, 22.0], [80.0, 15.5], [72.5, 15.5]
+        ] ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Karnataka" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [ [
+          [74.0, 11.5], [74.0, 18.0], [78.0, 18.0], [78.0, 11.5], [74.0, 11.5]
+        ] ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tamil Nadu" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [ [
+          [76.0, 8.0], [76.0, 13.5], [80.5, 13.5], [80.5, 8.0], [76.0, 8.0]
+        ] ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "West Bengal" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [ [
+          [85.0, 21.0], [85.0, 27.5], [90.0, 27.5], [90.0, 21.0], [85.0, 21.0]
+        ] ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Uttar Pradesh" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [ [
+          [77.0, 24.0], [77.0, 30.0], [83.0, 30.0], [83.0, 24.0], [77.0, 24.0]
+        ] ]
+      }
+    }
+  ]
+}
